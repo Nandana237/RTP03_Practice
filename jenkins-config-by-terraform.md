@@ -20,10 +20,10 @@ Configuring Jenkins-Master
 
 10. Check for docker images
 
-check for nginx.conf and docker-compose.yml
+11. Check for nginx.conf and docker-compose.yml
 
-docker-compose up -d
+12. docker-compose up -d
 
-browse jenkins-master IP:4000
+13. Browse jenkins-master IP:4000
 
-sudo cat /home/ec2-user/jenkins_compose/jenkins_configuration/secrets/initialAdminPassword
+14. sudo cat /home/ec2-user/jenkins_compose/jenkins_configuration/secrets/initialAdminPassword
