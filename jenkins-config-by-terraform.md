@@ -1,22 +1,24 @@
-Run Master and Slave by Terraform code "ec2_with_vpc_sg_variables_foreach_output"
+Configuring Jenkins-Master
+---------------------------
+1. Run Master and Slave by Terraform code "ec2_with_vpc_sg_variables_foreach_output"
 
-Connect Jenkins-master
+2. Connect Jenkins-master
 
-sudo su --> sudo yum install git -y
+3. sudo su --> sudo yum install git -y
 
-git clone https://github.com/Nandana237/valaxy-RTP-03.git
+4. git clone https://github.com/Nandana237/valaxy-RTP-03.git
 
-cd valaxy-RTP-03 
+5. cd valaxy-RTP-03 
 
-ls -l --> you will find jenkins-post-install.sh
+6. ls -l --> you will find jenkins-post-install.sh
 
-chmod 755 jenkins-post-install.sh
+7. chmod 755 jenkins-post-install.sh
 
-./jenkins-post-install.sh --> Docker and docker-compose will be installed
+8. ./jenkins-post-install.sh --> Docker and docker-compose will be installed
 
-sudo chmod 777 /var/run/docker.sock
+9. sudo chmod 777 /var/run/docker.sock
 
-Check for docker images
+10. Check for docker images
 
 check for nginx.conf and docker-compose.yml
 
