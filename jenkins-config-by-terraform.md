@@ -27,3 +27,24 @@ Configuring Jenkins-Master
 13. Browse jenkins-master IP:4000
 
 14. sudo cat /home/ec2-user/jenkins_compose/jenkins_configuration/secrets/initialAdminPassword
+
+Configuring Jenkins-Slave
+---------------------------
+1. Connect Jenkins-Slave server
+
+2. sudo su
+
+3. sudo yum install git -y
+
+4. git clone https://github.com/Nandana237/valaxy-RTP-03.git
+
+5. cd valaxy-RTP-03
+
+6. Check for slave-setup.sh
+
+7. sudo chmod 755 slave-setup.sh
+
+8. ./slave-setup.sh  --> It will install Java, git, maven and docker
+
+9. You can check java --version, docker --version, and mvn --version
+
