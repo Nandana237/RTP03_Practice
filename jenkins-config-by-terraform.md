@@ -48,3 +48,27 @@ Configuring Jenkins-Slave
 
 9. You can check java --version, docker --version, and mvn --version
 
+Configuring Master-Slave system
+-------------------------------
+1. Go to jenkins --> Manage Jenkins --> Nodes and Clouds --> New Node --> Name (jenkins-slave) --> Permanent Agent --> Create
+
+2. Name (jenkins-slave) --> description (jenkins-slave) --> Number of executors (5) --> Remote root directory (/home/ec2-user/jenkins)
+
+3. Labels (java-slave) --> use this node as much as possible --> Launch agents via SSH --> Host (jenkins-slave IP Address)
+
+4. Credentials (slave key.pem) --> Host Key Verification Strategy (Non verifying Verification Strategy) --> keep this agent online as much as possible
+
+5. save --> launch --> you can see the msg (agent successfully connected and online)
+
+Test Master and Slave connection
+--------------------------------
+1. Jenkins --> New Item --> test-job --> freestyle project --> OK
+
+2. Restrict where this project can be run --> Label Expression (java-slave) --> Build steps (execute shell)
+  
+3. echo "This job is for testing master and slave connection >> /home/ec2-user/test.txt --> save --> build the job
+
+4. login to jenkins-slave --> check for test.txt at /home/ec2-user/
+
+5. cd jenkins --> You can find remoting, remoting.jar, and workspace
+
